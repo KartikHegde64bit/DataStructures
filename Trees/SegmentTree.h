@@ -14,6 +14,9 @@ struct Node {
     Node(int l, int r) : left(nullptr), right(nullptr), nodeSum(0), leftIndex(l), rightIndex(r) {}
 };
 
+/**
+ * This is Range Sum segement tree, i,e for given two indices, it returns the sum between them
+ */
 class SegmentTree {
 private:
     Node* root;
@@ -24,7 +27,7 @@ private:
 
 public:
     SegmentTree(vector<int> inputArray);
-    void updateTree(int index, int value);
+    void updateIndex(int index, int value);
     int getSum(int left, int right);
 };
 
